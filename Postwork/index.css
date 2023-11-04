@@ -1,0 +1,248 @@
+/* selector universal, se identifca por el caracter * */
+/* se comporta de dos maneras
+    globalmente
+    localmente
+*/
+
+* {
+    /* afecta a todo el documento */
+    margin: 0;
+}
+
+body {
+    margin: 8px 16px 8px 16px; /* top right bottom left */
+    /* margin-top: 8px;
+    margin-right: 16px;
+    margin-bottom: 8px;
+    margin-left: 16px; */
+}
+
+/* selector de id se identifica por el caracter # */
+
+#container {
+    /* asignación de estilos */
+    /* nombrepropiedad : valorpropiedad ; */
+    /* background-color: rgb(98, 45, 9); red, green, blue - 0 a 255 */
+    background-color: gray; /*hexadecimales*/
+    font-size: 24px;
+    display: inline-block;
+    width: 100%;
+}
+
+/* selector de tag */
+
+/* nav div {
+    display: inline-block;
+} */
+
+/* selector universal anidado */
+
+nav {
+    padding: 4px;/* top right bottom left */
+    display: flex;
+    column-gap: 16px;
+    justify-content: space-evenly;
+}
+
+nav * {
+    /* afectar a cualquier elemento dentro de la nav */
+    display: inline-block;
+    margin: 0 2px;/* top right bottom left */
+    background-color: bisque;
+}
+
+nav *:hover {
+    /* afectar a cualquier elemento dentro de la nav */
+    flex-grow: 1;
+    text-align: center;
+}
+
+
+/* selector de clase, se identifica por caracter . */
+/* .option {
+    display: inline-block;
+} */
+
+.alineado {
+    order: 4;
+}
+
+.segundo {
+    order: -1;
+}
+
+#container-main {
+    display: grid;
+    grid-template-columns: auto 25% 25%;
+    grid-template-rows: 50% 50%;
+    height: 600px;
+    width: 100%;
+    margin-bottom: 48px;
+    grid-template-areas: "imagen texto1 texto1"
+                         "imagen texto2 video";
+    gap: 16px;
+    /* row-gap
+       column-gap */
+}
+
+main {
+    margin-top: 48px;
+}
+
+.container-image {
+    /*grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;*/
+    grid-area: imagen;
+}
+
+.container-image * {
+    width: 100%;
+    height: 100%;
+}
+
+.primer-parrafo {
+    /*grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;*/
+    grid-area: texto1;
+}
+
+.segundo-parrafo {
+    /*grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;*/
+    grid-area: texto2;
+}
+
+.video {
+    /*grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;*/
+    grid-area: video;
+}
+
+.video * {
+    width: 100%;
+    height: 100%;
+}
+
+/* .primer-parrafo, .segundo-parrafo {
+    padding: 8px;
+} */
+
+#container-main :nth-child(3), #container-main :nth-child(2) {
+    padding: 16px;
+}
+
+.container-accionables {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-accionables * {
+    padding: 4px 8px;
+    font-size: 16px;
+}
+
+.container-final {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-final > * {
+    width: 50%;
+}
+
+.container-final :nth-child(1) {
+    display: flex;
+   justify-content: center; 
+}
+
+.container-final form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 80%;
+}
+
+.container-final form :last-child {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+}
+
+/* media queries */
+
+/* @media screen and (min-width: 0) and (max-width: 450px) {
+    body {
+        background-color: yellow;
+    }
+} */
+
+@media screen and (max-width: 600px) {
+
+    #container {
+        background-color: bisque;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav * {
+        width: 100%;
+        text-align: center;
+        margin: 8px 0;
+    }
+
+    #container-main {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 25% 35% 20% 20%;
+        grid-template-areas: "imagen imagen"
+                             "texto1 texto1"
+                             "texto2 texto2"
+                             "video video";
+        height: auto;
+        gap: 0;
+    }
+
+    .primer-parrafo {
+        min-height: 50px;
+        overflow-y: scroll;
+    }
+
+    .container-accionables {
+        flex-direction: column;
+        gap:8px;
+        margin-bottom: 16px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1199px) {
+    #container-main {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 25% 25% 25% 25%;
+        grid-template-areas: "imagen imagen"
+                             "texto1 texto1"
+                             "texto2 texto2"
+                             "video video";
+        height: auto;
+        gap: 0;
+    }
+
+    .primer-parrafo {
+        min-height: auto;
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: beige;
+    }
+}
