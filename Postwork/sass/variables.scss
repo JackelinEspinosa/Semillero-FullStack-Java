@@ -1,0 +1,28 @@
+$configuration-container-main-columns: auto 25% 25%;
+$configuration-container-main-columns: auto 25% 25%;
+$configuration-container-main-rows: 50% 50%;
+$configuration-container-main-areas: "imagen texto1 texto1"
+                                     "imagen texto2 video";
+
+// grid template tablet
+$configuration-container-main-tablet-columns: 50% 50%;
+$configuration-container-main-tablet-rows: 25% 25% 25% 25%;
+$configuration-container-main-tablet-areas: "imagen imagen"
+                                            "texto1 texto1"
+                                            "texto2 texto2"
+                                            "video video";
+
+// grid template mobile
+$configuration-container-main-mobile-columns: 50% 50%;
+$configuration-container-main-mobile-rows: 25% 35% 20% 20%;
+$configuration-container-main-mobile-areas: "imagen imagen"
+                                            "texto1 texto1"
+                                            "texto2 texto2"
+                                            "video video";
+
+
+$configuration-border-global: 2px red solid;
+$margin-global: 0;
+$configuration-nav-margin: 0 2px;
+$nav-bg-color: #006bff;
+$desktop-body-bg-color: beige;
