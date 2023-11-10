@@ -1,26 +1,4 @@
 
-  @keyframes rotateImage {
-    0% {
-      rotate: 0;
-    }
-    
-    25% {
-      rotate: (90deg);
-    }
-    
-    50% {
-      rotate: (180deg);
-    }
-    
-    75% {
-      rotate: (270deg);
-    }
-  
-    100% {
-        rotate: (360deg);
-    }
-  }
-  
   @keyframes scaleChange {
     50% {
       transform: scale(0.5);
