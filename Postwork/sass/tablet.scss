@@ -1,0 +1,15 @@
+@media screen and (min-width: 601px) and (max-width: 1199px) {
+    #container-main {
+        grid-template-columns: $configuration-container-main-tablet-columns;
+        grid-template-rows: $configuration-container-main-tablet-rows;
+        grid-template-areas: $configuration-container-main-tablet-areas;
+        height: auto;
+        gap: 0;
+        
+        .primer-parrafo {
+            min-height: auto;
+            overflow-y: scroll;
+        }
+    }
+  
+  }
