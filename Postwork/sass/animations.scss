@@ -1,7 +1,26 @@
 
-  @keyframes scaleChange {
-    50% {
-      transform: scale(0.5);
-    }
+@keyframes scaleChange {
+  50% {
+    transform: scale(0.5);
   }
-  
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.element1 {
+  animation: scaleChange 2s infinite alternate;
+}
+
+.element2 {
+  animation: rotateAnimation 3s infinite linear;
+}
